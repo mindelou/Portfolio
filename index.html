@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Tyler Godfrey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/sans-comic-sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        top: 100%; /* Adjust this value to control the distance below the navigation bar */
+        margin-top: 0; /* Remove the margin-top */
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: palevioletred;
+        text-color: white
+      }
+
+      .topnav {
+        background-color: black;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <div class="dropdown">
+        <a class="active" href="index.html">Jobs</a>
+        <div class="dropdown-content">
+          <a href="2news.html">2 News</a>
+          <a href="lds.html">LDS Conference Center</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume</a>
+    </div>
+    <hr>
+    <h1>Tyler Godfrey's current jobs</h1>
+    <hr>
+    <div id="cards">
+      <div class="card" data-color="blue">
+        <a href="another-page.html">
+          <img class="card-front-image card-image" src="https://yt3.googleusercontent.com/ytc/APkrFKYJb3oSdy7b-v7W3KccfKk-Xpru9WyHtBiTfBQP=s900-c-k-c0x00ffffff-no-rj" style="width: 40%;" />
+          <span class="click-indicator"></span>
+        </a>
+      </div>
+      <div class="card" data-color="green">
+        <a href="another-page.html">
+          <img class="card-front-image card-image" src="https://content.churchofjesuschrist.org/acp/bc/cp/Canada/images2020/The%20Resurrected%20and%20Living%20Christ%20Stands%20as%20the%20Cornerstone%20for%20the%20New%20Church%20Symbol/1200x1200/4-church_jesus_christ_highfidelity_symbol.jpg" style="width: 40%;" />
+          <span class="click-indicator"></span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
