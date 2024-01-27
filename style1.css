@@ -99,7 +99,7 @@ section img#mountains_front
 #text
 {
   position: absolute;
-  color: #f1ff;
+  color: #000000ff;
   white-space: nowrap;
   font-size: 4.5vw;
   z-index: 9;
