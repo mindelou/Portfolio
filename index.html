@@ -1,76 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About Tyler Godfrey</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/sans-comic-sans" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      .dropdown {
-        position: relative;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: black;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        top: 100%; /* Adjust this value to control the distance below the navigation bar */
-        margin-top: 0; /* Remove the margin-top */
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-
-      .dropdown-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      .dropdown-content a:hover {
-        background-color: palevioletred;
-        text-color: white
-      }
-
-      .topnav {
-        background-color: black;
-        overflow: hidden;
-      }
-    </style>
+    <title>The V△MPIRE | Vanilla JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
   </head>
   <body>
-    <div class="topnav">
-      <div class="dropdown">
-        <a class="active" href="index.html">Jobs</a>
-        <div class="dropdown-content">
-          <a href="2news.html">2 News</a>
-          <a href="lds.html">LDS Conference Center</a>
-        </div>
-      </div>
-      <a href="contact.html">Contact</a>
-      <a href="resume.html">Resume</a>
+    <header>
+      <a href="#" class="logo" >Tyler Godfrey</a>
+      <ul>
+        <li><a href="#" class="active1">Home</a></li> 
+        <li><a href="About.html">About</a></li>
+        <li><a href="Work.html">Work</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars">
+      <img src="moon.png" id="moon">
+      <img src="mountains_behind.png" id="mountains_behind">
+      <h2 id="text">Tyler Godfrey</h2>
+      <a href="https://parallax-website4.vampireofficals.repl.co/" id="btn">Leave Website</a>
+      <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+      <h2>About Website</h2>
+      <p>
+        <br> <br> <br> <br>
+       Q - What is Parallax Website Design?
+        <br> <br>
+       Parallax scrolling is a computer graphics technique used by web designers to create a faux-3D effect. As users scroll down a webpage, different layers of content or backgrounds move at different speeds, and this creates an optical illusion. ... used parallax graphics to create a sensation of depth.
+       <br> <br> <br> <br>
+       Q - Are parallax Websites good?
+       <br> <br>
+       User Experience. Parallax websites are perfect for the user journey. Since all the content appears as the user scrolls, you can refine the user journey, strengthen your brand story, and streamline your funnel. It's no wonder parallax websites have a 37.5% higher conversion rate.
+       <br> <br> <br> <br>
+       Q - What is an example of parallax?
+       <br> <br>
+       The term “parallax” refers to the apparent movement of objects when viewed from different positions. The everyday example of this is seen driving on the highway-- when you look out the window, electrical poles near the road seem to zoom past, while trees in the distance appear to slowly drift by.
+       <br> <br> <br> <br>
+       Q - Should I use parallax?
+       <br> <br>
+       Utilizing the technique of parallax scrolling is already going to help you be able to show your audience a vast amount of information without having to crowd it all in one screen shot. You also have the visual flair associated with conveying the information in a compelling way.
+       <br> <br> <br> <br>
+       <doloribus class="lorem"></doloribus></p>
     </div>
-    <hr>
-    <h1>Tyler Godfrey's current jobs</h1>
-    <hr>
-    <div id="cards">
-      <div class="card" data-color="blue">
-        <a href="another-page.html">
-          <img class="card-front-image card-image" src="https://yt3.googleusercontent.com/ytc/APkrFKYJb3oSdy7b-v7W3KccfKk-Xpru9WyHtBiTfBQP=s900-c-k-c0x00ffffff-no-rj" style="width: 40%;" />
-          <span class="click-indicator"></span>
-        </a>
-      </div>
-      <div class="card" data-color="green">
-        <a href="another-page.html">
-          <img class="card-front-image card-image" src="https://content.churchofjesuschrist.org/acp/bc/cp/Canada/images2020/The%20Resurrected%20and%20Living%20Christ%20Stands%20as%20the%20Cornerstone%20for%20the%20New%20Church%20Symbol/1200x1200/4-church_jesus_christ_highfidelity_symbol.jpg" style="width: 40%;" />
-          <span class="click-indicator"></span>
-        </a>
-      </div>
-    </div>
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let mountains_front = document.getElementById('mountains_front');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+      })
+    </script>
   </body>
 </html>
+

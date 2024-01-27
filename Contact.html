@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The V△MPIRE | Vanilla JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="style4.css">
+  </head>
+  <body>
+    <header>
+      <a href="Logo.html" class="logo" >△</a>
+      <ul>
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="About.html">About</a></li>
+        <li><a href="Work.html">Work</a></li>
+        <li><a href="#" class="active4">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars">
+      <img src="moon.png" id="moon">
+      <img src="mountains_behind.png" id="mountains_behind">
+      <h2 id="text">Contact</h2>
+      <a href="https://discord.gg/VndfXRPdXR" id="btn">Contact Now</a>
+      <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+      <h2>Other Options</h2>
+      <p> <br> <br> <br> <br>  Email 1 ˚₊· ͟͟͞͞➳❥ lakshyakadian009@gmail.com <br> <br> Email 2 ˚₊· ͟͟͞͞➳❥ lakshyakadian01@gmail.com <br> <br> <doloribus class="lorem"></doloribus></p>
+    </div>
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let mountains_front = document.getElementById('mountains_front');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+      })
+    </script>
+  </body>
+</html>
