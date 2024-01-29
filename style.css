@@ -1,89 +1,177 @@
-body {
-  font-family: Georgia, sans-serif;
-  font-weight: bold;
-  background-color: #2d2c30;
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+body
+{
+  min-height: 100vh;
+  background: linear-gradient(#0000,#000);
 }
-
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: cyan;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: lightcoral;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #00d8ff;
-  color: white;
-}
-
-#cards {
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo
+{
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li
+{
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active1
+{
+  background: #fff;
+  color: #2b1055;
+}
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section::before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top,#000000,transparent);
+  z-index: 1000;
+}
+section img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+section img#moon
+{
+
+}
+section img#mountains_front
+{
+  z-index: 10;
+}
+#text
+{
+  position: absolute;
+  color: #000000ff;
+  white-space: nowrap;
+  font-size: 4.5vw;
+  z-index: 9;
+}
+#btn
+{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+.sec
+{
+  position: relative;
+  padding: 100px;
+  background-color: #1c0522;
+}
+.sec h2
+{
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.sec p
+{
+  font-size: 1em;
+  color: #fff
+}
+#moon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
 }
 
-.card {
-  background-size: cover;
-  background-position: center;
+
+@media (max-width: 768px) {
+  #moon {
+    transform: scale(0.5);
+  }
+}
+
+
+
+
+#box-container {
+  position: fixed;
+  top: 50%;
+  left: 48%; /* Adjust this value to move the container more to the left */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clickable-box {
+  width: 500px;
+  height: 50px;
+  background-color: #ff113a;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  border-radius: 5px;
   cursor: pointer;
-  outline: none;
-  transition: transform 100ms;
-  max-width: 40%; /* Adjust this value as needed */
 }
 
-.card .card-image {
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  border-radius: clamp(0.5rem, 0.75vw, 2rem);
-}
-
-.card:hover {
-  transform: scale(0.98);
-}
+.clickable-box:hover {
+  background-color: #00e127;
