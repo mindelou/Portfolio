@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Tylergodfrey | Home</title>
-    <link rel="stylesheet" type="text/css" href="style1.css">
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo" ></a>
-   <!--   <ul>
-        <li><a href="#" class="active1">Home</a></li>  
-        <li><a href="resume.pdf">Resume</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        
-      </ul>
-      --->
-    </header>
-    <section>
-      <img src="background.png" id="background high quality">
-     
- 
-      <div id="box-container">
-        <a href="resume" class="clickable-box">Resume</a>
-        <a href="contact" class="clickable-box">Contact me</a>
-      </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tylergodfrey | Home</title>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"></a>
+  </header>
+  <section>
+    <img src="background.png" id="background" alt="High-quality background image">
+    <div id="box-container">
+      <a href="resume" class="clickable-box">Resume</a>
+      <a href="contact" class="clickable-box">Contact me</a>
+      <a href="portfolio" class="clickable-box">Portfolio</a>
+    </div>
+  </section>
 
-
-      
-    <br>
-
-
-  </body>
+  <script>
+    // Check if the screen width is less than or equal to 767 pixels
+    if (window.innerWidth <= 767) {
+      // Change the src attribute of the background image for mobile
+      document.getElementById('background').src = 'tyler-mobile.png';
+    }
+  </script>
+</body>
 </html>
