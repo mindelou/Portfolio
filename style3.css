@@ -1,97 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style3.css">
+ 
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"></a>
+    <nav>
+      <ul>
+        <li><a href="index">Home</a></li> 
+          <li><a href="resume">Resume</a></li> 
+           <li><a href="portfolio" class="active4">Portfolio</a></li>
+        <li><a href="contact">Contact</a></li>
+        <!-- Add other navigation links as needed -->
+      </ul>
+    </nav>
+  </header>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
 
-body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: url('blankbackground.png') center/cover no-repeat fixed;
-}
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10000;
-}
 
-header .logo {
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+  <div class="image-container">
+    <div class="image-box">
+      <img src="placeholder.png" alt="Image 1" class="portfolio-image">
+       <p>LDS CONFERENCE CENTER</p>
+    </div>
+    <div class="image-box">
+      <img src="placeholder.png" alt="LDS CONFERENCE CENTER" class="portfolio-image">
+       <p>Caption for Image 2</p>
+    </div>
+  </div>
 
-header nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header nav ul li {
-  list-style: none;
-  margin-left: 20px;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  padding: 6px 15px;
-  color: #fff;
-  border-radius: 20px;
-}
-
-header nav ul li a:hover,
-header nav ul li a.active4 {
-  background: #fff;
-  color: #2b1055;
-}
-
-section#portfolio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('blankbackground.png') center/cover no-repeat fixed;
-  height: 100vh;
-  margin: 0;
-}
-
-.gallery-item {
-  width: 48%;
-  margin: 0 1%;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.image-container {
-  display: flex;
-  margin-top: 5%;
-}
-
-.image-box {
-  width: 48%;
-  overflow: hidden;
-  margin: 0 1%;
-}
-
-.portfolio-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px; /* Add border-radius for rounded corners */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
+ 
+</body>
+</html>
